@@ -1,0 +1,179 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 11rem auto 8.25rem auto;
+    max-width: 120rem;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .8rem;
+    width: 100%;
+}
+
+.search-container input {
+    background-color: var(--bg-input);
+    font-family: var(--ff-primary);
+    color: var(--tt-primary);
+    outline: none;
+
+    font-size: 1.6rem;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    margin-left: .8rem;
+    width: 66.67%;
+}
+
+.search-container button {
+    background-color: var(--bg-button);
+    color: var(--tt-white);
+
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    border: none;
+    border-radius: .5rem;
+    height: 4.8rem;
+    padding: 1.2rem 3.2rem;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 100%;
+}
+
+thead {
+    background-color: var(--bg-thead);
+    color: var(--tt-primary);
+}
+
+.thead-item {
+    padding: 1.6rem 2.4rem 1.6rem 4.0rem;
+
+    line-height: 3.2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.thead-item:first-child {
+    border-top-left-radius: .5rem;
+}
+
+.thead-item:last-child {
+    border-top-right-radius: .5rem;
+}
+
+td {
+    color: var(--tt-white);
+    padding: 2.4rem 2.4rem 2.4rem 4rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background-color: #06181C;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  color: var(--tt-white);  
+  text-decoration: none;
+}
+
+td:first-child {
+    color: #E1E1E6;
+    font-weight: 400
+}
+
+td.user a p {
+  font-weight: bold;
+}
+
+.btn-remove {
+    color: var(--tt-remove);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .search-container {
+        align-items: center;
+    }
+
+    .search-container input{
+        width: 100%;
+    }
+
+    .thead-item {
+        padding: .8rem 1.2rem .8rem 2.0rem;
+        line-height: 1.6rem;
+        font-size: 1.2rem;
+    }
+
+    .search-container input {
+        font-size: 1.2rem;
+        padding: 1.2rem;
+    }
+    
+    .search-container button {
+        font-size: 1.4rem;
+        height: 3.3rem;
+        padding: .6rem 1.6rem;
+    }
+}
+
+@media (max-width: 610px) {
+
+    td {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    td.user {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    td.user img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .btn-remove {
+        font-size: 1rem;
+    }
+}
